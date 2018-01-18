@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { parseFiles } = require('@nrwl/schematics/src/command-line/shared');
-const { affectedApps } = require('nrwl/schematics/src/command-line/affected-apps');
+const { affectedApps } = require('@nrwl/schematics/src/command-line/affected-apps');
 const {
   readdir
 } = require('fs-extra');
@@ -36,7 +36,7 @@ const allFilesInDir = (dirName) => {
 }
 
 const getAffectedLibs = () => {
-  const p = parseFiles();
+  const p = parseFiles(process.argv.slice(3));
   const touchedFiles = p.files;
   const config = JSON.parse(fs.readFileSync('.angular-cli.json', 'utf-8'));
   const projects = (config.apps ? config.apps : []).map(function (p) {

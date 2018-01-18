@@ -6,6 +6,6 @@
     "lib": {
       "entryFile": "index.ts"
     },
-    "dest": "../../@common/mylib-two"
+    "dest": "@common/mylib-two"
   }
 }
