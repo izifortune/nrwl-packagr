@@ -10,6 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "apps:affected": "node ./node_modules/@nrwl/schematics/src/affected/run-affected.js apps",
+    "libs:affected": "node ./scripts/libs-affected.js libs",
     "build:affected": "node ./node_modules/@nrwl/schematics/src/affected/run-affected.js build",
     "e2e:affected": "node ./node_modules/@nrwl/schematics/src/affected/run-affected.js e2e",
     "format": "node ./node_modules/prettier/bin/prettier.js --single-quote --print-width 120 --write \"{apps,libs}/**/*.ts\"",
@@ -37,12 +38,13 @@
   "devDependencies": {
     "@angular/cli": "file:.angular_cli.tgz",
     "@angular/compiler-cli": "5.1.0",
-    "@nrwl/schematics": "0.6.0",
     "@angular/language-service": "5.1.0",
+    "@nrwl/schematics": "0.6.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "fs-extra": "^5.0.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -51,10 +53,11 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^1.6.0",
+    "prettier": "^1.9.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "2.5.3",
-    "prettier": "^1.9.0"
+    "typescript": "2.5.3"
   }
 }

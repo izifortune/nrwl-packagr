@@ -25,12 +25,29 @@
     "schematics": {
       "collection": "@nrwl/schematics",
       "postGenerate": "npm run format",
-      "newProject": ["app", "lib"]
+      "newProject": [
+        "app",
+        "lib"
+      ]
     },
     "styleExt": "css",
     "component": {}
   },
   "warnings": {
     "typescriptMismatch": false
-  }
+  },
+  "apps": [
+    {
+      "name": "mylib",
+      "root": "libs/mylib/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "mylib-two",
+      "root": "libs/mylib-two/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    }
+  ]
 }
